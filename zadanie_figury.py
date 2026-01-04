@@ -50,17 +50,17 @@ class Kolo(FiguraGeometryczna):
 
 pass
 class Trojkat(FiguraGeometryczna):
-    def __init__(self, a, b, c, h):
+    def __init__(self, a, b, c):
         self.a = a
         self.b = b
         self.c = c
-        self.h = h
+
 
     def policz_pole(self):
-        return self.a * self.h/2
+        return (self.a + self.b + self.c)/2
 
     def policz_obwod(self):
-        return self.a + self.b + self.c + self.h
+        return self.a + self.b + self.c
 
 prostokat = Prostokat (4,6)
 
@@ -68,7 +68,7 @@ kwadrat = Kwadrat (3)
 
 kolo = Kolo (5)
 
-trojkat = Trojkat (3,5,2,2)
+trojkat = Trojkat (3,5,2)
 
 print(prostokat.policz_pole())
 print(prostokat.policz_obwod())
